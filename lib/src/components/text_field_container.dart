@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
-import 'package:teamxlegend/src/utility/input_validator.dart';
+import 'package:teamxleadgen/src/utility/input_validator.dart';
 import 'dart:io';
 
-import 'package:teamxlegend/src/utility/utility.dart';
+import 'package:teamxleadgen/src/utility/utility.dart';
 
 class TextFieldContainerData {
   final String? initialValue;
@@ -64,11 +64,11 @@ class _TextFieldContainerState extends State<TextFieldContainer> {
         (controller?.text.length ?? 0) > 0) {
       shouldShowClearButton = true;
     }
-    AmountValidator validator = AmountRegexValidator(source: regexSource);
+    TXLAmountValidator validator = TXLAmountRegexValidator(source: regexSource);
     var keyBoardType = TextInputType.name;
     var isValidatorRequired = false;
     if (widget.containerData.textFieldType == TextFieldType.number) {
-      validator = AmountRegexValidator(source: regexSource);
+      validator = TXLAmountRegexValidator(source: regexSource);
       isValidatorRequired = true;
       keyBoardType = const TextInputType.numberWithOptions(decimal: false);
     } else if (widget.containerData.textFieldType == TextFieldType.email) {
@@ -79,7 +79,7 @@ class _TextFieldContainerState extends State<TextFieldContainer> {
     List<TextInputFormatter> dtLst = [];
     dtLst.add(LengthLimitingTextInputFormatter(widget.containerData.textLimit));
     if (isValidatorRequired) {
-      dtLst.add(InputFormatterValidator(validator: validator));
+      dtLst.add(TXLInputFormatterValidator(validator: validator));
     }
     var container = Container(
         height: 50,

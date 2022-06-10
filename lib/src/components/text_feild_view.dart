@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TXTextFieldView extends StatefulWidget {
-  const TXTextFieldView({Key? key}) : super(key: key);
+class TXLTextFieldView extends StatefulWidget {
+  const TXLTextFieldView({Key? key}) : super(key: key);
 
   @override
-  _TXTextFieldViewState createState() => _TXTextFieldViewState();
+  _TXLTextFieldViewState createState() => _TXLTextFieldViewState();
 }
 
-class _TXTextFieldViewState extends State<TXTextFieldView> {
+class _TXLTextFieldViewState extends State<TXLTextFieldView> {
   @override
   Widget build(BuildContext context) {
     return Container();

@@ -3,15 +3,15 @@ import 'package:teamxleadgen/src/components/button.dart';
 import 'package:teamxleadgen/src/components/text_field_container.dart';
 import 'package:teamxleadgen/src/utility/utility.dart';
 
-class TXLegendView extends StatefulWidget {
+class TXLeadgenView extends StatefulWidget {
   final Function callBack;
-  const TXLegendView({Key? key, required this.callBack}) : super(key: key);
+  const TXLeadgenView({Key? key, required this.callBack}) : super(key: key);
 
   @override
-  _TXLegendViewState createState() => _TXLegendViewState();
+  _TXLeadgenViewState createState() => _TXLeadgenViewState();
 }
 
-class _TXLegendViewState extends State<TXLegendView> {
+class _TXLeadgenViewState extends State<TXLeadgenView> {
   BoxDecoration decoration() {
     //Setting cornerRadius
     return const BoxDecoration(
